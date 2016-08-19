@@ -57,7 +57,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_SENTENCES);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_RAPAT);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_PESERTA_RAPAT);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NOTULENSI);
@@ -85,13 +84,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 +ID_RAPAT+" INTEGER,"
                 +NOTULENSI+" TEXT)";
 
-//        String CREATE_SENTENCES_TABLE = "CREATE TABLE " + TABLE_SENTENCES +" ("
-//                +ID_SENTENCES+" INTEGER PRIMARY KEY AUTOINCREMENT,"
-//                +TITLE+" TEXT,"
-//                +USER_NAME+" TEXT,"
-//                +SENTENCES+" TEXT,"
-//                +UPLOAD_STATUS+" TEXT)";
-//        db.execSQL(CREATE_SENTENCES_TABLE);
 
         db.execSQL(CREATE_RAPAT_TABLE);
         db.execSQL(CREATE_PESERTA_RAPAT_TABLE);
@@ -144,6 +136,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void updateStatusRapat(int idRapat){
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("UPDATE " + TABLE_RAPAT + " SET " + STATUS_RAPAT + "='" + SUDAH_BERAKHIR + "'" + " WHERE " + ID_RAPAT + "='" + idRapat + "'");
+    }
+
+    public void updateStatusUpload(int idRapat){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("UPDATE "+TABLE_RAPAT+" SET "+STATUS_UPLOAD+"='"+SUDAH_UPLOAD+"'"+" WHERE "+ID_RAPAT+"='"+idRapat+"'");
     }
 
     public ArrayList<Meeting> keteranganSemuaRapatBelumDimulai(){

@@ -10,6 +10,12 @@ public class FamiliarWord {
     private static final String PASSWORD = "password";
     private static final String PATH_FOTO = "path_foto";
     private static final String LEVEL_USER = "level_user";
+    private static final String PEMIMPIN_RAPAT = "pemimpin_rapat";
+    private static final String JUDUL_RAPAT = "judul_rapat";
+    private static final String TUJUAN_RAPAT = "tujuan_rapat";
+    private static final String WAKTU_RAPAT = "waktu_rapat";
+    private static final String NOTULENSI = "notulensi";
+    private static final String ID_RAPAT = "id_rapat";
 
     private static final String SESSION = "session";
 
@@ -39,5 +45,29 @@ public class FamiliarWord {
 
     public static String getNAME() {
         return NAME;
+    }
+
+    public static String getPemimpinRapat() {
+        return PEMIMPIN_RAPAT;
+    }
+
+    public static String getJudulRapat() {
+        return JUDUL_RAPAT;
+    }
+
+    public static String getTujuanRapat() {
+        return TUJUAN_RAPAT;
+    }
+
+    public static String getWaktuRapat() {
+        return WAKTU_RAPAT;
+    }
+
+    public static String getNOTULENSI() {
+        return NOTULENSI;
+    }
+
+    public static String getIdRapat() {
+        return ID_RAPAT;
     }
 }

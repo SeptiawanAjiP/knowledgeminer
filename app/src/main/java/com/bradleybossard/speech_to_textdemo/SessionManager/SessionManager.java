@@ -23,14 +23,9 @@ public class SessionManager {
         editor = sharedPreferences.edit();
     }
 
-    public void createSessionLogin (String user_name,String name){
-        editor.putString(FamiliarWord.getUserName(),user_name);
+    public void createSessionLogin (String idUser,String name){
+        editor.putString(FamiliarWord.getIdUser(), idUser);
         editor.putString(FamiliarWord.getNAME(),name);
-        editor.commit();
-    }
-
-    public void saveUrlServer(String url){
-        editor.putString(Connection.getURL(),"http://"+url+"/km/koneksi.php?");
         editor.commit();
     }
 
@@ -38,15 +33,15 @@ public class SessionManager {
         sharedPreferences.edit().clear().commit();
     }
 
-    public HashMap<String,String> getUserSession(){
-        HashMap<String,String> hm = new HashMap<>();
-        hm.put(FamiliarWord.getUserName(),sharedPreferences.getString(FamiliarWord.getUserName(), null));
-        hm.put(FamiliarWord.getNAME(), sharedPreferences.getString(FamiliarWord.getNAME(), null));
-        return hm;
+    public String getNama(){
+        String nama = sharedPreferences.getString(FamiliarWord.getNAME(),null);
+        return nama;
     }
 
-    public String getAlamatServer(){
-        return sharedPreferences.getString(Connection.getURL(),null);
+    public String getIdUser(){
+        String idUser = sharedPreferences.getString(FamiliarWord.getIdUser(),null);
+        return idUser;
     }
+
 }
 

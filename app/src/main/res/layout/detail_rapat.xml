@@ -59,7 +59,10 @@
         android:id="@+id/scrollView"
         android:layout_below="@+id/detail_peserta_rapat"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/btn_upload">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,8 +81,20 @@
         android:text="Upload"
         android:textColor="@color/colorAccent"
         android:gravity="center"
-        android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/detail_peserta_rapat"
-        android:layout_toEndOf="@+id/detail_peserta_rapat"></Button>
+        android:layout_toEndOf="@+id/detail_peserta_rapat"
+        android:layout_marginBottom="52dp"
+        android:visibility="gone"></Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Rapat Sudah Diupload"
+        android:id="@+id/sudah_diupload"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
 </RelativeLayout>
