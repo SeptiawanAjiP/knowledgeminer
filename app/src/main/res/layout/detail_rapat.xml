@@ -75,7 +75,7 @@
             android:layout_marginTop="30dp" />
     </ScrollView>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:id="@+id/btn_upload"
         android:text="Upload"
@@ -86,7 +86,7 @@
         android:layout_toRightOf="@+id/detail_peserta_rapat"
         android:layout_toEndOf="@+id/detail_peserta_rapat"
         android:layout_marginBottom="52dp"
-        android:visibility="gone"></Button>
+        android:visibility="visible"></Button>
 
     <TextView
         android:layout_width="wrap_content"

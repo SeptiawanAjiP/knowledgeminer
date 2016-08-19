@@ -4,7 +4,7 @@ package com.bradleybossard.speech_to_textdemo.Connection;
  * Created by Septiawan Aji P on 8/16/2016.
  */
 public class Connection {
-    private static final String URL = "http://192.168.1.105/dmkm/koneksi.php?";
+    private static final String URL = "http://datamining.hol.es/koneksi.php?";
     private static final String KODE = "kode";
     private static final String GET_STATUS_LOGIN = "getStatusLogin";
     private static final String GET_NAMA = "getNama";
